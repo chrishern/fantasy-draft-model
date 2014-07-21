@@ -1,7 +1,9 @@
 /**
  * 
  */
-package net.blackcat.fantasy.draft.player.types;
+package net.blackcat.fantasy.draft.player;
+
+import net.blackcat.fantasy.draft.player.types.Position;
 
 /**
  * Object representing a player within the fantasy draft game.  This represents a 'base' player 
