@@ -21,6 +21,16 @@ public class Player {
 	private Position position;
 	private int totalPoints;
 
+	public Player(final long id, final String forename, final String surname, final String team,
+			final Position position, final int totalPoints) {
+		this.id = id;
+		this.forename = forename;
+		this.surname = surname;
+		this.team = team;
+		this.position = position;
+		this.totalPoints = totalPoints;
+	}
+
 	/**
 	 * @return the id
 	 */
