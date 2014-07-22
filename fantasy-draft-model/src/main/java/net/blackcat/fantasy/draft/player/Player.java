@@ -21,6 +21,10 @@ public class Player {
 	private Position position;
 	private int totalPoints;
 
+	public Player() {
+		
+	}
+	
 	public Player(final long id, final String forename, final String surname, final String team,
 			final Position position, final int totalPoints) {
 		this.id = id;
