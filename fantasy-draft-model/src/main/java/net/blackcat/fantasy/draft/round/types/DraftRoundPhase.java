@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.blackcat.fantasy.draft.bidround.types;
+package net.blackcat.fantasy.draft.round.types;
 
 /**
  * Enum representing the different types of bidding phases within the fantasy draft.
@@ -9,7 +9,7 @@ package net.blackcat.fantasy.draft.bidround.types;
  * @author Chris
  *
  */
-public enum BiddingPhase {
+public enum DraftRoundPhase {
 
 	AUCTION,
 	TRANSFER_WINDOW;
