@@ -14,7 +14,7 @@ import net.blackcat.fantasy.draft.player.types.Position;
  */
 public class Player {
 
-	private long id;
+	private int id;
 	private String forename;
 	private String surname;
 	private String team;
@@ -25,7 +25,7 @@ public class Player {
 		
 	}
 	
-	public Player(final long id, final String forename, final String surname, final String team,
+	public Player(final int id, final String forename, final String surname, final String team,
 			final Position position, final int totalPoints) {
 		this.id = id;
 		this.forename = forename;
@@ -38,14 +38,14 @@ public class Player {
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 	
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
