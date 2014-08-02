@@ -8,15 +8,17 @@ package net.blackcat.fantasy.draft.player.types;
  */
 public enum Position {
 
-	GOALKEEPER("Goalkeeper"),
-	DEFENDER("Defender"),
-	MIDFIEDER("Midfielder"),
-	STRIKER("Forward");
+	GOALKEEPER("Goalkeeper", "goalkeepers"),
+	DEFENDER("Defender", "defenders"),
+	MIDFIEDER("Midfielder", "midfielders"),
+	STRIKER("Forward", "strikers");
 	
 	private String fantasyPremierLeagueValue;
+	private String restApiValue;
 	
-	private Position(final String fantasyPremiumLeagueValue) {
+	private Position(final String fantasyPremiumLeagueValue, final String restApiValue) {
 		this.fantasyPremierLeagueValue = fantasyPremiumLeagueValue;
+		this.restApiValue = restApiValue;
 	}
 	
 	/**
@@ -27,6 +29,13 @@ public enum Position {
 	}
 	
 	/**
+	 * @return the restApiValue
+	 */
+	public String getRestApiValue() {
+		return restApiValue;
+	}
+
+	/**
 	 * Convert the string FPL position value to the enum value.
 	 * 
 	 * @param fantasyPremierLeaguePosition String value of the position from the FPL.
@@ -35,6 +44,22 @@ public enum Position {
 	public static Position fromFantasyPremierLeaguePosition(final String fantasyPremierLeaguePosition) {
 		for (final Position position : Position.values()) {
 			if (position.getFantasyPremierLeagueValue().equals(fantasyPremierLeaguePosition)) {
+				return position;
+			}
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Convert the string REST API position value to the enum value.
+	 * 
+	 * @param restApiValue String value of the position from the REST API parameter.
+	 * @return Equivalent Position enum.
+	 */
+	public static Position fromRestApiValue(final String restApiValue) {
+		for (final Position position : Position.values()) {
+			if (position.getRestApiValue().equals(restApiValue)) {
 				return position;
 			}
 		}
