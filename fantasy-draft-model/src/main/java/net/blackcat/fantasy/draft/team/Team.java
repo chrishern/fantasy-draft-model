@@ -19,12 +19,27 @@ public class Team implements Serializable {
 
 	private static final long serialVersionUID = -6114339036617218927L;
 
+	private int id;
 	private String teamName;
 	private List<SelectedPlayer> selectedPlayers;
 	private TeamStatus status;
 
 	public Team(final String teamName) {
 		this.teamName = teamName;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	/**
