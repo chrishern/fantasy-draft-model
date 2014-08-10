@@ -17,6 +17,9 @@ public class TeamBids implements Serializable {
 	private int teamId;
 	private List<Bid> bids;
 	
+	public TeamBids() {
+	}
+
 	public TeamBids(final int teamId, final List<Bid> bids) {
 		this.teamId = teamId;
 		this.bids = bids;

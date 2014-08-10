@@ -18,7 +18,10 @@ public class Bid implements Serializable {
 
 	private int playerId;
 	private BigDecimal amount;
-	
+
+	public Bid() {
+	}
+
 	public Bid(final int playerId, final BigDecimal amount) {
 		this.playerId = playerId;
 		this.amount = amount;
