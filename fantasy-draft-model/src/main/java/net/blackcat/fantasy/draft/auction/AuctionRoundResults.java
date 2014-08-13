@@ -19,6 +19,10 @@ public class AuctionRoundResults implements Serializable {
 	private int auctionPhase;
 	private List<AuctionPlayerResult> playerResults;
 
+	public AuctionRoundResults() {
+		
+	}
+	
 	public AuctionRoundResults(final int auctionPhase) {
 		this.auctionPhase = auctionPhase;
 	}

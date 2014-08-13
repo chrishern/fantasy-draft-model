@@ -24,6 +24,10 @@ public class Team implements Serializable {
 	private List<SelectedPlayer> selectedPlayers;
 	private TeamStatus status;
 
+	public Team() {
+		
+	}
+	
 	public Team(final String teamName) {
 		this.teamName = teamName;
 	}

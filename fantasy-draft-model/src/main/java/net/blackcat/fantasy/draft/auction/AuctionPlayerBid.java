@@ -18,6 +18,10 @@ public class AuctionPlayerBid implements Serializable {
 	private Team team;
 	private BigDecimal amount;
 	
+	public AuctionPlayerBid() {
+		
+	}
+	
 	public AuctionPlayerBid(final Team team, final BigDecimal amount) {
 		this.team = team;
 		this.amount = amount;

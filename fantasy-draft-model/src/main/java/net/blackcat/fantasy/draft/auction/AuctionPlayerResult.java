@@ -23,6 +23,10 @@ public class AuctionPlayerResult implements Serializable {
 	private List<AuctionPlayerBid> matchingHighBids;
 	private List<AuctionPlayerBid> unsuccessfulBids;
 	
+	public AuctionPlayerResult() {
+		
+	}
+	
 	public AuctionPlayerResult(final Player player) {
 		this.player = player;
 	}

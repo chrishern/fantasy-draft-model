@@ -6,6 +6,8 @@ package net.blackcat.fantasy.draft.player;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import net.blackcat.fantasy.draft.player.types.Position;
+
 /**
  * Object representing a player who is selected within a team in the fantasy draft.
  * 
@@ -22,6 +24,11 @@ public class SelectedPlayer implements Serializable {
 	private String team;
 	private int pointsScored;
 	private BigDecimal cost;
+	private Position position;
+	
+	public SelectedPlayer() {
+		
+	}
 	
 	/**
 	 * @return the id
@@ -94,5 +101,19 @@ public class SelectedPlayer implements Serializable {
 	 */
 	public void setCost(BigDecimal cost) {
 		this.cost = cost;
+	}
+
+	/**
+	 * @return the position
+	 */
+	public Position getPosition() {
+		return position;
+	}
+
+	/**
+	 * @param position the position to set
+	 */
+	public void setPosition(Position position) {
+		this.position = position;
 	}
 }
