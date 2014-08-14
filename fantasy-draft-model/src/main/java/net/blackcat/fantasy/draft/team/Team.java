@@ -23,6 +23,8 @@ public class Team implements Serializable {
 	private String teamName;
 	private List<SelectedPlayer> selectedPlayers;
 	private TeamStatus status;
+	private boolean openDraftRound;
+	private boolean madeBidsInOpenDraftRound;
 
 	public Team() {
 		
@@ -86,6 +88,34 @@ public class Team implements Serializable {
 	 */
 	public void setStatus(final TeamStatus status) {
 		this.status = status;
+	}
+
+	/**
+	 * @return the openDraftRound
+	 */
+	public boolean isOpenDraftRound() {
+		return openDraftRound;
+	}
+
+	/**
+	 * @param openDraftRound the openDraftRound to set
+	 */
+	public void setOpenDraftRound(boolean openDraftRound) {
+		this.openDraftRound = openDraftRound;
+	}
+
+	/**
+	 * @return the madeBidsInOpenDraftRound
+	 */
+	public boolean isMadeBidsInOpenDraftRound() {
+		return madeBidsInOpenDraftRound;
+	}
+
+	/**
+	 * @param madeBidsInOpenDraftRound the madeBidsInOpenDraftRound to set
+	 */
+	public void setMadeBidsInOpenDraftRound(boolean madeBidsInOpenDraftRound) {
+		this.madeBidsInOpenDraftRound = madeBidsInOpenDraftRound;
 	}
 }
 
