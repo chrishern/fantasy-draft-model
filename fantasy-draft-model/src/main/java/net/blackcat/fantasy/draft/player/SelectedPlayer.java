@@ -14,7 +14,7 @@ import net.blackcat.fantasy.draft.player.types.Position;
  * @author Chris
  *
  */
-public class SelectedPlayer implements Serializable {
+public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> {
 
 	private static final long serialVersionUID = -3001502246826062271L;
 
@@ -115,5 +115,10 @@ public class SelectedPlayer implements Serializable {
 	 */
 	public void setPosition(Position position) {
 		this.position = position;
+	}
+
+	@Override
+	public int compareTo(final SelectedPlayer o) {
+		return this.position.compareTo(o.getPosition());
 	}
 }

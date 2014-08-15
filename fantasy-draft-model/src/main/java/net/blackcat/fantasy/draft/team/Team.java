@@ -4,6 +4,7 @@
 package net.blackcat.fantasy.draft.team;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 import net.blackcat.fantasy.draft.player.SelectedPlayer;
@@ -23,6 +24,7 @@ public class Team implements Serializable {
 	private String teamName;
 	private List<SelectedPlayer> selectedPlayers;
 	private TeamStatus status;
+	private BigDecimal cost;
 	private boolean openDraftRound;
 	private boolean madeBidsInOpenDraftRound;
 
@@ -116,6 +118,20 @@ public class Team implements Serializable {
 	 */
 	public void setMadeBidsInOpenDraftRound(boolean madeBidsInOpenDraftRound) {
 		this.madeBidsInOpenDraftRound = madeBidsInOpenDraftRound;
+	}
+
+	/**
+	 * @return the cost
+	 */
+	public BigDecimal getCost() {
+		return cost;
+	}
+
+	/**
+	 * @param cost the cost to set
+	 */
+	public void setCost(BigDecimal cost) {
+		this.cost = cost;
 	}
 }
 
