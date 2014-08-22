@@ -5,7 +5,9 @@ package net.blackcat.fantasy.draft.player;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
+import net.blackcat.fantasy.draft.GameweekScore;
 import net.blackcat.fantasy.draft.player.types.Position;
 
 /**
@@ -25,6 +27,7 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	private int pointsScored;
 	private BigDecimal cost;
 	private Position position;
+	private List<GameweekScore> weekScores;
 	
 	public SelectedPlayer() {
 		
@@ -115,6 +118,20 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	 */
 	public void setPosition(Position position) {
 		this.position = position;
+	}
+
+	/**
+	 * @return the weekScores
+	 */
+	public List<GameweekScore> getWeekScores() {
+		return weekScores;
+	}
+
+	/**
+	 * @param weekScores the weekScores to set
+	 */
+	public void setWeekScores(List<GameweekScore> weekScores) {
+		this.weekScores = weekScores;
 	}
 
 	@Override

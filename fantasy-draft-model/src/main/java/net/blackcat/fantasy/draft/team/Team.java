@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
+import net.blackcat.fantasy.draft.GameweekScore;
 import net.blackcat.fantasy.draft.player.SelectedPlayer;
 import net.blackcat.fantasy.draft.team.types.TeamStatus;
 
@@ -16,7 +17,7 @@ import net.blackcat.fantasy.draft.team.types.TeamStatus;
  * @author Chris
  *
  */
-public class Team implements Serializable {
+public class Team implements Serializable, Comparable<Team> {
 
 	private static final long serialVersionUID = -6114339036617218927L;
 
@@ -27,6 +28,8 @@ public class Team implements Serializable {
 	private BigDecimal cost;
 	private boolean openDraftRound;
 	private boolean madeBidsInOpenDraftRound;
+	private List<GameweekScore> weekScores;
+	private int totalScore;
 
 	public Team() {
 		
@@ -132,6 +135,45 @@ public class Team implements Serializable {
 	 */
 	public void setCost(BigDecimal cost) {
 		this.cost = cost;
+	}
+
+	/**
+	 * @return the weekScores
+	 */
+	public List<GameweekScore> getWeekScores() {
+		return weekScores;
+	}
+
+	/**
+	 * @param weekScores the weekScores to set
+	 */
+	public void setWeekScores(List<GameweekScore> weekScores) {
+		this.weekScores = weekScores;
+	}
+
+	/**
+	 * @return the totalScore
+	 */
+	public int getTotalScore() {
+		return totalScore;
+	}
+
+	/**
+	 * @param totalScore the totalScore to set
+	 */
+	public void setTotalScore(int totalScore) {
+		this.totalScore = totalScore;
+	}
+
+	@Override
+	public int compareTo(final Team teamToCompare) {
+		if (this.totalScore == teamToCompare.totalScore) {
+			return 0;
+		} else if (this.totalScore < teamToCompare.totalScore) {
+			return 1;
+		}
+		
+		return -1;
 	}
 }
 
