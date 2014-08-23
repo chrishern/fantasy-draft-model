@@ -9,6 +9,7 @@ import java.util.List;
 
 import net.blackcat.fantasy.draft.GameweekScore;
 import net.blackcat.fantasy.draft.player.types.Position;
+import net.blackcat.fantasy.draft.player.types.SelectedPlayerStatus;
 
 /**
  * Object representing a player who is selected within a team in the fantasy draft.
@@ -27,6 +28,7 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	private int pointsScored;
 	private BigDecimal cost;
 	private Position position;
+	private SelectedPlayerStatus selectionStatus;
 	private List<GameweekScore> weekScores;
 	
 	public SelectedPlayer() {
@@ -134,8 +136,48 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 		this.weekScores = weekScores;
 	}
 
+	/**
+	 * @return the selectionStatus
+	 */
+	public SelectedPlayerStatus getSelectionStatus() {
+		return selectionStatus;
+	}
+
+	/**
+	 * @param selectionStatus the selectionStatus to set
+	 */
+	public void setSelectionStatus(SelectedPlayerStatus selectionStatus) {
+		this.selectionStatus = selectionStatus;
+	}
+
 	@Override
 	public int compareTo(final SelectedPlayer o) {
+		if (this.selectionStatus == null) {
+			return this.position.compareTo(o.getPosition());
+		}
+		
+		if (isPlayerASubstitute(this) && !isPlayerASubstitute(o)) {
+			return 1;
+		}
+		
+		if (!isPlayerASubstitute(this) && isPlayerASubstitute(o)) {
+			return -1;
+		}
+		
+		if (isPlayerASubstitute(this) && isPlayerASubstitute(o)) {
+			return this.selectionStatus.compareTo(o.getSelectionStatus());
+		}
+		
 		return this.position.compareTo(o.getPosition());
+	}
+
+	/**
+	 * Determine if a player is a substitute or not.
+	 * 
+	 * @param The player to determine if they are a substitute.
+	 * @return True if the player is a substitute.  False otherwise.
+	 */
+	private boolean isPlayerASubstitute(final SelectedPlayer player) {
+		return SelectedPlayerStatus.SUBSTITUTE_POSITIONS.contains(player.selectionStatus);
 	}
 }
