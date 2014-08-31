@@ -31,17 +31,17 @@ public enum ValidFormations {
 	}
 
 	/**
+	 * @return the no of goalkeepers
+	 */
+	public int getNoOfGoalkeepers() {
+		return 1;
+	}
+	
+	/**
 	 * @return the noOfDefenders
 	 */
 	public int getNoOfDefenders() {
 		return noOfDefenders;
-	}
-
-	/**
-	 * @param noOfDefenders the noOfDefenders to set
-	 */
-	public void setNoOfDefenders(int noOfDefenders) {
-		this.noOfDefenders = noOfDefenders;
 	}
 
 	/**
@@ -52,23 +52,9 @@ public enum ValidFormations {
 	}
 
 	/**
-	 * @param noOfMidfielders the noOfMidfielders to set
-	 */
-	public void setNoOfMidfielders(int noOfMidfielders) {
-		this.noOfMidfielders = noOfMidfielders;
-	}
-
-	/**
 	 * @return the noOfStrikers
 	 */
 	public int getNoOfStrikers() {
 		return noOfStrikers;
-	}
-
-	/**
-	 * @param noOfStrikers the noOfStrikers to set
-	 */
-	public void setNoOfStrikers(int noOfStrikers) {
-		this.noOfStrikers = noOfStrikers;
 	}
 }
