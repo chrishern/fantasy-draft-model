@@ -3,7 +3,7 @@ package net.blackcat.fantasy.draft.league;
 import java.io.Serializable;
 import java.util.List;
 
-import net.blackcat.fantasy.draft.team.Team;
+import net.blackcat.fantasy.draft.team.LeagueTableTeam;
 
 /**
  * Model object representing a fantasy draft league.
@@ -16,7 +16,7 @@ public class League implements Serializable {
 	private static final long serialVersionUID = 6474945515317795912L;
 
 	private String name;
-	private List<Team> teams;
+	private List<LeagueTableTeam> teams;
 	
 	public League(final String name) {
 		this.name = name;
@@ -37,13 +37,13 @@ public class League implements Serializable {
 	/**
 	 * @return the teams
 	 */
-	public List<Team> getTeams() {
+	public List<LeagueTableTeam> getTeams() {
 		return teams;
 	}
 	/**
 	 * @param teams the teams to set
 	 */
-	public void setTeams(List<Team> teams) {
+	public void setTeams(List<LeagueTableTeam> teams) {
 		this.teams = teams;
 	}
 
