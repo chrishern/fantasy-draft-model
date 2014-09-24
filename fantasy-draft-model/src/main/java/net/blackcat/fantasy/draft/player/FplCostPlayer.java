@@ -7,19 +7,19 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * Object containing the player data required to populate the initial FPL cost of that player.
+ * Object containing the FPL player cost data.
  * 
  * @author Chris
  *
  */
-public class PopulateInitialFplCostPlayer implements Serializable {
+public class FplCostPlayer implements Serializable {
 
 	private static final long serialVersionUID = 4809588981402611380L;
 
 	private int id;
 	private BigDecimal initialCost;
 
-	public PopulateInitialFplCostPlayer(final int id, final BigDecimal initialCost) {
+	public FplCostPlayer(final int id, final BigDecimal initialCost) {
 		this.id = id;
 		this.initialCost = initialCost;
 	}
