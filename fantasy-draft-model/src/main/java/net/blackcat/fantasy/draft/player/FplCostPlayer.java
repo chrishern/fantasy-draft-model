@@ -18,10 +18,12 @@ public class FplCostPlayer implements Serializable {
 
 	private int id;
 	private BigDecimal initialCost;
+	private BigDecimal currentCost;
 
-	public FplCostPlayer(final int id, final BigDecimal initialCost) {
+	public FplCostPlayer(final int id, final BigDecimal initialCost, final BigDecimal currentCost) {
 		this.id = id;
 		this.initialCost = initialCost;
+		this.currentCost = currentCost;
 	}
 	/**
 	 * @return the id
@@ -34,5 +36,11 @@ public class FplCostPlayer implements Serializable {
 	 */
 	public BigDecimal getInitialCost() {
 		return initialCost;
+	}
+	/**
+	 * @return the currentCost
+	 */
+	public BigDecimal getCurrentCost() {
+		return currentCost;
 	}
 }
