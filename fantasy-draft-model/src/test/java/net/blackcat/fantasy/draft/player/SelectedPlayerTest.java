@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 import net.blackcat.fantasy.draft.player.types.Position;
-import net.blackcat.fantasy.draft.player.types.SelectedPlayerStatus;
+import net.blackcat.fantasy.draft.player.types.SelectedPlayerStartingElevenStatus;
 
 import org.junit.Test;
 
@@ -54,43 +54,43 @@ public class SelectedPlayerTest {
 		// arrange
 		final SelectedPlayer pickedGoalkeeper = new SelectedPlayer();
 		pickedGoalkeeper.setPosition(Position.GOALKEEPER);
-		pickedGoalkeeper.setSelectionStatus(SelectedPlayerStatus.PICKED);
+		pickedGoalkeeper.setSelectionStatus(SelectedPlayerStartingElevenStatus.PICKED);
 		
 		final SelectedPlayer sub1 = new SelectedPlayer();
 		sub1.setPosition(Position.STRIKER);
-		sub1.setSelectionStatus(SelectedPlayerStatus.SUB_1);
+		sub1.setSelectionStatus(SelectedPlayerStartingElevenStatus.SUB_1);
 		
 		final SelectedPlayer pickedDefender = new SelectedPlayer();
 		pickedDefender.setPosition(Position.DEFENDER);
-		pickedDefender.setSelectionStatus(SelectedPlayerStatus.PICKED);
+		pickedDefender.setSelectionStatus(SelectedPlayerStartingElevenStatus.PICKED);
 		
 		final SelectedPlayer sub3 = new SelectedPlayer();
 		sub3.setPosition(Position.DEFENDER);
-		sub3.setSelectionStatus(SelectedPlayerStatus.SUB_3);
+		sub3.setSelectionStatus(SelectedPlayerStartingElevenStatus.SUB_3);
 		
 		final SelectedPlayer sub2 = new SelectedPlayer();
 		sub2.setPosition(Position.MIDFIEDER);
-		sub2.setSelectionStatus(SelectedPlayerStatus.SUB_2);
+		sub2.setSelectionStatus(SelectedPlayerStartingElevenStatus.SUB_2);
 		
 		final SelectedPlayer viceCaptain = new SelectedPlayer();
 		viceCaptain.setPosition(Position.DEFENDER);
-		viceCaptain.setSelectionStatus(SelectedPlayerStatus.VICE_CAPTAIN);
+		viceCaptain.setSelectionStatus(SelectedPlayerStartingElevenStatus.VICE_CAPTAIN);
 		
 		final SelectedPlayer pickedMidfielder = new SelectedPlayer();
 		pickedMidfielder.setPosition(Position.MIDFIEDER);
-		pickedMidfielder.setSelectionStatus(SelectedPlayerStatus.PICKED);
+		pickedMidfielder.setSelectionStatus(SelectedPlayerStartingElevenStatus.PICKED);
 		
 		final SelectedPlayer captain = new SelectedPlayer();
 		captain.setPosition(Position.MIDFIEDER);
-		captain.setSelectionStatus(SelectedPlayerStatus.CAPTAIN);
+		captain.setSelectionStatus(SelectedPlayerStartingElevenStatus.CAPTAIN);
 		
 		final SelectedPlayer sub4 = new SelectedPlayer();
 		sub4.setPosition(Position.GOALKEEPER);
-		sub4.setSelectionStatus(SelectedPlayerStatus.SUB_4);
+		sub4.setSelectionStatus(SelectedPlayerStartingElevenStatus.SUB_4);
 		
 		final SelectedPlayer pickedStriker = new SelectedPlayer();
 		pickedStriker.setPosition(Position.STRIKER);
-		pickedStriker.setSelectionStatus(SelectedPlayerStatus.PICKED);
+		pickedStriker.setSelectionStatus(SelectedPlayerStartingElevenStatus.PICKED);
 		
 		final List<SelectedPlayer> players = Arrays.asList(
 				pickedGoalkeeper, sub1, pickedDefender, sub3, sub2, viceCaptain, pickedMidfielder, captain, sub4, pickedStriker);

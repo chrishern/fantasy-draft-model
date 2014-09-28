@@ -9,7 +9,7 @@ import java.util.List;
 
 import net.blackcat.fantasy.draft.GameweekScore;
 import net.blackcat.fantasy.draft.player.types.Position;
-import net.blackcat.fantasy.draft.player.types.SelectedPlayerStatus;
+import net.blackcat.fantasy.draft.player.types.SelectedPlayerStartingElevenStatus;
 
 /**
  * Object representing a player who is selected within a team in the fantasy draft.
@@ -28,7 +28,7 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	private int pointsScored;
 	private BigDecimal cost;
 	private Position position;
-	private SelectedPlayerStatus selectionStatus;
+	private SelectedPlayerStartingElevenStatus selectionStatus;
 	private List<GameweekScore> weekScores;
 	private BigDecimal currentSellToPotPrice;
 	
@@ -140,14 +140,14 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	/**
 	 * @return the selectionStatus
 	 */
-	public SelectedPlayerStatus getSelectionStatus() {
+	public SelectedPlayerStartingElevenStatus getSelectionStatus() {
 		return selectionStatus;
 	}
 
 	/**
 	 * @param selectionStatus the selectionStatus to set
 	 */
-	public void setSelectionStatus(SelectedPlayerStatus selectionStatus) {
+	public void setSelectionStatus(SelectedPlayerStartingElevenStatus selectionStatus) {
 		this.selectionStatus = selectionStatus;
 	}
 
@@ -193,6 +193,6 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	 * @return True if the player is a substitute.  False otherwise.
 	 */
 	private boolean isPlayerASubstitute(final SelectedPlayer player) {
-		return SelectedPlayerStatus.SUBSTITUTE_POSITIONS.contains(player.selectionStatus);
+		return SelectedPlayerStartingElevenStatus.SUBSTITUTE_POSITIONS.contains(player.selectionStatus);
 	}
 }
