@@ -30,6 +30,7 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	private Position position;
 	private SelectedPlayerStatus selectionStatus;
 	private List<GameweekScore> weekScores;
+	private BigDecimal currentSellToPotPrice;
 	
 	public SelectedPlayer() {
 		
@@ -148,6 +149,20 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	 */
 	public void setSelectionStatus(SelectedPlayerStatus selectionStatus) {
 		this.selectionStatus = selectionStatus;
+	}
+
+	/**
+	 * @return the currentSellToPotPrice
+	 */
+	public BigDecimal getCurrentSellToPotPrice() {
+		return currentSellToPotPrice;
+	}
+
+	/**
+	 * @param currentSellToPotPrice the currentSellToPotPrice to set
+	 */
+	public void setCurrentSellToPotPrice(BigDecimal currentSellToPotPrice) {
+		this.currentSellToPotPrice = currentSellToPotPrice;
 	}
 
 	@Override
