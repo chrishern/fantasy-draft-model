@@ -4,6 +4,7 @@
 package net.blackcat.fantasy.draft.team;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 import net.blackcat.fantasy.draft.player.SelectedPlayer;
@@ -21,6 +22,7 @@ public class TeamSummary implements Serializable {
 	private String teamName;
 	private int totalPoints;
 	private List<SelectedPlayer> team;
+	private BigDecimal remainingBudget;
 	
 	/**
 	 * @return the teamName
@@ -57,5 +59,17 @@ public class TeamSummary implements Serializable {
 	 */
 	public void setTeam(List<SelectedPlayer> team) {
 		this.team = team;
+	}
+	/**
+	 * @return the remainingBudget
+	 */
+	public BigDecimal getRemainingBudget() {
+		return remainingBudget;
+	}
+	/**
+	 * @param remainingBudget the remainingBudget to set
+	 */
+	public void setRemainingBudget(BigDecimal remainingBudget) {
+		this.remainingBudget = remainingBudget;
 	}
 }
