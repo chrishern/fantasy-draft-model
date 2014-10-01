@@ -19,11 +19,24 @@ public class TeamSummary implements Serializable {
 
 	private static final long serialVersionUID = -1667427487631416275L;
 
+	private int id;
 	private String teamName;
 	private int totalPoints;
 	private List<SelectedPlayer> team;
 	private BigDecimal remainingBudget;
 	
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
 	/**
 	 * @return the teamName
 	 */
