@@ -10,6 +10,7 @@ import java.util.List;
 import net.blackcat.fantasy.draft.GameweekScore;
 import net.blackcat.fantasy.draft.player.types.Position;
 import net.blackcat.fantasy.draft.player.types.SelectedPlayerStartingElevenStatus;
+import net.blackcat.fantasy.draft.player.types.SelectedPlayerStatus;
 
 /**
  * Object representing a player who is selected within a team in the fantasy draft.
@@ -31,6 +32,7 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	private SelectedPlayerStartingElevenStatus selectionStatus;
 	private List<GameweekScore> weekScores;
 	private BigDecimal currentSellToPotPrice;
+	private SelectedPlayerStatus squadStatus;
 	
 	public SelectedPlayer() {
 		
@@ -163,6 +165,20 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	 */
 	public void setCurrentSellToPotPrice(BigDecimal currentSellToPotPrice) {
 		this.currentSellToPotPrice = currentSellToPotPrice;
+	}
+
+	/**
+	 * @return the squadStatus
+	 */
+	public SelectedPlayerStatus getSquadStatus() {
+		return squadStatus;
+	}
+
+	/**
+	 * @param squadStatus the squadStatus to set
+	 */
+	public void setSquadStatus(SelectedPlayerStatus squadStatus) {
+		this.squadStatus = squadStatus;
 	}
 
 	@Override
