@@ -30,6 +30,7 @@ public class Team implements Serializable, Comparable<Team> {
 	private boolean madeBidsInOpenDraftRound;
 	private List<GameweekScore> weekScores;
 	private int totalScore;
+	private BigDecimal remainingBudget;
 
 	public Team() {
 		
@@ -163,6 +164,20 @@ public class Team implements Serializable, Comparable<Team> {
 	 */
 	public void setTotalScore(int totalScore) {
 		this.totalScore = totalScore;
+	}
+
+	/**
+	 * @return the remainingBudget
+	 */
+	public BigDecimal getRemainingBudget() {
+		return remainingBudget;
+	}
+
+	/**
+	 * @param remainingBudget the remainingBudget to set
+	 */
+	public void setRemainingBudget(BigDecimal remainingBudget) {
+		this.remainingBudget = remainingBudget;
 	}
 
 	@Override
