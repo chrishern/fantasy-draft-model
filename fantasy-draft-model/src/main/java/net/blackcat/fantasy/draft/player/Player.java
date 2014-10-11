@@ -3,6 +3,8 @@
  */
 package net.blackcat.fantasy.draft.player;
 
+import java.math.BigDecimal;
+
 import net.blackcat.fantasy.draft.player.types.Position;
 
 /**
@@ -20,6 +22,7 @@ public class Player {
 	private String team;
 	private Position position;
 	private int totalPoints;
+	private BigDecimal fplCost;
 
 	public Player() {
 		
@@ -117,5 +120,19 @@ public class Player {
 	 */
 	public void setTotalPoints(int totalPoints) {
 		this.totalPoints = totalPoints;
+	}
+
+	/**
+	 * @return the fplCost
+	 */
+	public BigDecimal getFplCost() {
+		return fplCost;
+	}
+
+	/**
+	 * @param fplCost the fplCost to set
+	 */
+	public void setFplCost(BigDecimal fplCost) {
+		this.fplCost = fplCost;
 	}
 }
