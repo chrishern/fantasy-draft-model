@@ -23,6 +23,7 @@ public class TeamSummary implements Serializable {
 	private String teamName;
 	private int totalPoints;
 	private List<SelectedPlayer> team;
+	private List<SelectedPlayer> soldPlayers;
 	private BigDecimal remainingBudget;
 	
 	/**
@@ -84,5 +85,17 @@ public class TeamSummary implements Serializable {
 	 */
 	public void setRemainingBudget(BigDecimal remainingBudget) {
 		this.remainingBudget = remainingBudget;
+	}
+	/**
+	 * @return the soldPlayers
+	 */
+	public List<SelectedPlayer> getSoldPlayers() {
+		return soldPlayers;
+	}
+	/**
+	 * @param soldPlayers the soldPlayers to set
+	 */
+	public void setSoldPlayers(List<SelectedPlayer> soldPlayers) {
+		this.soldPlayers = soldPlayers;
 	}
 }
