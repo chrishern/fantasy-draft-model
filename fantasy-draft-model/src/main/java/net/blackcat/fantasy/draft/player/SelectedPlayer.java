@@ -5,9 +5,7 @@ package net.blackcat.fantasy.draft.player;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.List;
 
-import net.blackcat.fantasy.draft.GameweekScore;
 import net.blackcat.fantasy.draft.player.types.Position;
 import net.blackcat.fantasy.draft.player.types.SelectedPlayerStartingElevenStatus;
 import net.blackcat.fantasy.draft.player.types.SelectedPlayerStatus;
@@ -26,11 +24,11 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	private String forename;
 	private String surname;
 	private String team;
+	private Integer currentWeeklyPoints;	// Integer object as it can be null if a player was not part of the starting XI for a week
 	private int pointsScored;
 	private BigDecimal cost;
 	private Position position;
 	private SelectedPlayerStartingElevenStatus selectionStatus;
-	private List<GameweekScore> weekScores;
 	private BigDecimal currentSellToPotPrice;
 	private SelectedPlayerStatus squadStatus;
 	
@@ -126,20 +124,6 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	}
 
 	/**
-	 * @return the weekScores
-	 */
-	public List<GameweekScore> getWeekScores() {
-		return weekScores;
-	}
-
-	/**
-	 * @param weekScores the weekScores to set
-	 */
-	public void setWeekScores(List<GameweekScore> weekScores) {
-		this.weekScores = weekScores;
-	}
-
-	/**
 	 * @return the selectionStatus
 	 */
 	public SelectedPlayerStartingElevenStatus getSelectionStatus() {
@@ -179,6 +163,20 @@ public class SelectedPlayer implements Serializable, Comparable<SelectedPlayer> 
 	 */
 	public void setSquadStatus(SelectedPlayerStatus squadStatus) {
 		this.squadStatus = squadStatus;
+	}
+
+	/**
+	 * @return the weeklyPoints
+	 */
+	public Integer getCurrentWeeklyPoints() {
+		return currentWeeklyPoints;
+	}
+
+	/**
+	 * @param currentWeeklyPoints the weeklyPoints to set
+	 */
+	public void setCurrentWeeklyPoints(Integer currentWeeklyPoints) {
+		this.currentWeeklyPoints = currentWeeklyPoints;
 	}
 
 	@Override
